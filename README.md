@@ -19,7 +19,7 @@ duplicados garantizando la calidad y consistencia de los datos.
 
 ### **DESARROLLO**
 #### **Modelo Relacional**
-<img src="images/modelo.png" alt="modelo" style="width:600px;height:300px;">
+<img src="images/modelo.PNG" alt="modelo" style="width:600px;height:300px;">
 
 Para el modelo dimensional se crearon 4 tablas que son las siguientes:
 
@@ -143,7 +143,7 @@ Posición de los satélites actualmente en servicio:
 ### **Ecuaciones**
 Para dar solucion a este reto se usan las ecuaciones de trilateración. La trilateración es un método matemático para determinar las posiciones relativas de objetos usando la geometría de triángulos de forma análoga a la triangulación.
 
-<img src="images/trilateracion.png" alt="trilateración" style="width:600px;height:300px;">
+<img src="images/trilateracion.PNG" alt="trilateración" style="width:600px;height:300px;">
 
 Alli se busca la interseccion de como minimo 3 circunferencias para hallar un unico punto resultante. Para ello se usa la ecuacion base de una circunferencia en un plano 2D.
 
@@ -191,16 +191,16 @@ Las constantes a calcular serian:
 
 2. Como correr client<BR>
 ```run main class```
-<img src="images/client.png" alt="client" style="width:600px;height:150px;">
+<img src="images/client.PNG" alt="client" style="width:600px;height:150px;">
 3. Como correr Api <BR>
 ejecutar ```mvn spring-boot:run```
 <img src="images/apiSatellite.png" alt="client" style="width:600px;height:90px;">
 
 4. Resultados:<BR>
 Api: 
-<img src="images/response.png" alt="client" style="width:600px;height:200px;">
+<img src="images/response.PNG" alt="client" style="width:600px;height:200px;">
 Client:
-<img src="images/responseClient.png" alt="client" style="width:600px;height:200px;">
+<img src="images/responseClient.PNG" alt="client" style="width:600px;height:200px;">
 <img src="images/responseClientMessage.png" alt="client" style="width:500px;height:220px;">
 
 ### **TO DO**
