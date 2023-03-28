@@ -201,7 +201,7 @@ Api:
 <img src="images/response.PNG" alt="client" style="width:600px;height:200px;">
 Client:
 <img src="images/responseClient.PNG" alt="client" style="width:600px;height:200px;">
-<img src="images/responseClientMessage.png" alt="client" style="width:500px;height:220px;">
+<img src="images/responseClientMessage.PNG" alt="client" style="width:500px;height:220px;">
 
 ### **TO DO**
 * Test unitarios
