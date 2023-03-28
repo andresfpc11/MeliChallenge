@@ -1,11 +1,6 @@
 package com.meli.controller;
 
-import com.meli.business.SatelliteBusiness;
-
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Scanner;
-import java.util.List;
 
 public class ControllerMenu {
     Scanner sn = new Scanner(System.in);
@@ -17,6 +12,9 @@ public class ControllerMenu {
     }
 
     public void paintLocationMenu() {
+        double distanceKenobi = -1;
+        double distanceSkyWalker = -1;
+        double distanceSato = -1;
         System.out.println("--------------------------------------------------------------------------------------");
         System.out.println("--------------------------------------------------------------------------------------");
         System.out.println("-------------------------------   MELI CHALLENGE   -----------------------------------");
@@ -32,11 +30,17 @@ public class ControllerMenu {
         System.out.println("¡Mucha suerte en su misión y que la fueza lo acompañe!");
         System.out.println("");
         System.out.println("Ingrese la distancia al satelite Kenobi: ");
-        double distanceKenobi = sn.nextDouble();
+        while(distanceKenobi<=0) {
+            distanceKenobi = validateDouble();
+        }
         System.out.println("Ingrese la distancia al satelite Skywalker: ");
-        double distanceSkyWalker = sn.nextDouble();
+        while(distanceSkyWalker<=0) {
+            distanceSkyWalker = validateDouble();
+        }
         System.out.println("Ingrese la distancia al satelite Sato: ");
-        double distanceSato = sn.nextDouble();
+        while(distanceSato<=0) {
+            distanceSato = validateDouble();
+        }
         controllerSatellite.getLocation(distanceKenobi, distanceSkyWalker, distanceSato);
     }
 
@@ -52,5 +56,17 @@ public class ControllerMenu {
         String messageSato = sn.next();
         controllerSatellite.getMessage(messageKenobi,messageSkyWalker,messageSato);
         System.out.println("Lo lograste terminaste la misión  ¡Gracias!");
+    }
+
+    private double validateDouble() {
+        double distance=0;
+        try {
+            distance = sn.nextDouble();
+        } catch (Exception e) {
+            System.out.println("Ingrese un valor valido: ");
+        } finally {
+            sn.nextLine();
+        }
+        return distance;
     }
 }
